@@ -9,4 +9,6 @@ from mtgsdk import Changelog
 import requests
 import pandas as pd
 
-card = Card.find(386616)
+card = Card.where(name='Diabolic Tutor').all()
+for card in card:
+    print(card.cmc)
